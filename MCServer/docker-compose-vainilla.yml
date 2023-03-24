@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    container_name: minecraft-server
+    environment:
+      EULA: "TRUE"
+      MEMORY: "1500M"
+      VERSION: "1.19.4"
+      TZ: "America/Mexico_City"
+    volumes:
+      - /home/joker/.minecraft-server:/data
+    ports:
+      - 25565:25565
+    restart: unless-stopped
