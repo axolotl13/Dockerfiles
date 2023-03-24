@@ -1,0 +1,20 @@
+version: "3"
+services:
+  jdownloader:
+    image: jaymoulin/jdownloader
+    container_name: jdownloader
+    restart: unless-stopped
+    user: 1000:100
+    volumes:
+      - /home/osmc/Docker/jdownloader/appdata:/opt/JDownloader/cfg
+      # - ./downloads:/opt/JDownloader/Downloads
+      - /home/osmc/Docker/jdownloader/appdata/logs:/opt/JDownloader/logs
+      - /mnt/MEDIA/Jdownloader:/opt/JDownloader/Downloads
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      MYJD_USER: $MYJD_USER
+      MYJD_PASSWORD: $MYJD_PASSW
+      MYJD_DEVICE_NAME: pixelmedia
+      #XDG_DOWNLOAD_DIR: /opt/JDownloader/Downloads
+    ports:
+      - 3129:3129
