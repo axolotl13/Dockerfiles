@@ -1,0 +1,13 @@
+name = "Geyser Fabric"
+author = "Gio"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "c94c8f9fdafae1501bf8d191ebc880a4dcf1e1f464466e6e1f515f4318442030"
+
+[versions]
+fabric = "0.14.18"
+minecraft = "1.19.4"
