@@ -1,12 +1,12 @@
-name = "Geyser Fabric"
+name = "BasicPerformance"
 author = "Gio"
-version = "1.0.0"
+version = "1"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "c94c8f9fdafae1501bf8d191ebc880a4dcf1e1f464466e6e1f515f4318442030"
+hash = "da9d928e7011fb6217a6a77051e7d749dc54c0ff0bd9722b9dce86a2448857cb"
 
 [versions]
 fabric = "0.14.18"

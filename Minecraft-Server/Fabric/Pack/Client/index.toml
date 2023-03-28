@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "mods/blur-fabric.pw.toml"
-hash = "631b4ee83e9ac2d8a093802784f71815bb5437fda4fd36b37eba8f7f0fe38bff"
+hash = "55c14fd0cba0ae4478945420862cfdec970a5ab40b04a34ce9e3f94b9d721e38"
 metafile = true
 
 [[files]]

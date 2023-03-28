@@ -11,11 +11,6 @@ hash = "c2814d761fc227d78759c88c38b37b3985fe4a36d18520a333965a1a9a601c2d"
 metafile = true
 
 [[files]]
-file = "mods/geyser.pw.toml"
-hash = "f0ca438d6cbff12b01643d901f4c6c96255d98e608ab8d30353884c793501aa7"
-metafile = true
-
-[[files]]
 file = "mods/jade.pw.toml"
 hash = "f686311201a7a46d392bff8e1df8c21b161ce2283b2927f0ae9b0c71857fa830"
 metafile = true
@@ -47,5 +42,5 @@ metafile = true
 
 [[files]]
 file = "mods/vmp-fabric.pw.toml"
-hash = "32086f66144cb0fe3983463f4eff19e2fa99f9648ad1163d18284694b515b4cd"
+hash = "40c1f4c25b3ddcd571ef583daa3b0bc7a17450e5672daf360cc652cc6401de18"
 metafile = true
