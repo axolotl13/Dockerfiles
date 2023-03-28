@@ -18,14 +18,14 @@ services:
       MOTD: "\\u00A7f\\u2583\\u2584\\u2585\\u2586\\u00A76\\u00A7l\\u00A7o Private Personal\\u00A7r\\u00A7l \\u00A7c\\u00A7l\\u00A7mServer\\u00A7e\\u00A7l \\u2586\\u2585\\u2584\\u2583"
       DIFFICULTY: "hard"
       PVP: "true"
-      MAX_PLAYERS: 30
+      MAX_PLAYERS: 20
       ONLINE_MODE: "true"
       VIEW_DISTANCE: 10
       SIMULATION_DISTANCE: 10
       SPAWN_PROTECTION: 16
       ICON: "https://github.com/axolotl13/Docker-files/raw/master/MCServer/Icons/warden2.png"
     volumes:
-      - /tmp/data:/data
+      - /data:/data
     ports:
       - 25565:25565
     restart: unless-stopped
