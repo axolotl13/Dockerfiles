@@ -23,7 +23,7 @@ services:
       VIEW_DISTANCE: 10
       SIMULATION_DISTANCE: 10
       SPAWN_PROTECTION: 16
-      ICON: "https://github.com/axolotl13/Docker-files/raw/master/MCServer/Icons/warden2.png"
+      ICON: "https://github.com/axolotl13/Docker-files/raw/master/Minecraft-Server/Icons/warden2.png"
     volumes:
       - /data:/data
     ports:
