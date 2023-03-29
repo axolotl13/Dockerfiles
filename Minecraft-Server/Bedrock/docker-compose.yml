@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  minecraft:
+    image: itzg/minecraft-bedrock-server
+    container_name: bedrock-server
+    environment:
+      EULA: "TRUE"
+      VERSION: "LATEST"
+      # Minecraft Game Options
+      GAMEMODE: "survival"
+      DIFFICULTY: "hard"
+      MAX_PLAYERS: 10
+      ONLINE_MODE: "true"
+      # VIEW_DISTANCE: 10
+      # TICK_DISTANCE: 4
+    volumes:
+      - /data:/data
+    ports:
+      - 19132:19132/udp
+    restart: unless-stopped
