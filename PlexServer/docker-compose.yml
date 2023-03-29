@@ -1,0 +1,15 @@
+version: "2.1"
+services:
+  plex:
+    image: linuxserver/plex:latest
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - VERSION=docker
+      - UMASK_SET=022
+    volumes:
+      - /home/xerox/Docker/plex/config:/config
+      - /mnt/MEDIA/Videos:/movies
+    restart: unless-stopped
