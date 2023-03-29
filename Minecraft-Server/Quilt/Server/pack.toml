@@ -1,0 +1,13 @@
+name = "Quilt"
+author = "Gio"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "1a4d9aa3793908a65d04b2a0deb23d169c34699dbf99fda8edf3a2406dd02c00"
+
+[versions]
+minecraft = "1.19.4"
+quilt = "0.18.6"
