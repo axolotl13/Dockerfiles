@@ -8,7 +8,7 @@ services:
       TYPE: "QUILT"
       QUILT_LOADER_VERSION: "0.18.5"
       QUILT_LAUNCHER_VERSION: "0.5.0"
-      PACKWIZ_URL: ""
+      PACKWIZ_URL: "https://raw.githubusercontent.com/axolotl13/Docker-files/master/Minecraft-Server/Quilt/Pack/Server/pack.toml"
       EULA: "TRUE"
       MEMORY: "2500M"
       VERSION: "1.19.4"
