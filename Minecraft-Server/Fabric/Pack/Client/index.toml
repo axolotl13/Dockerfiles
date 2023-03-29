@@ -31,6 +31,11 @@ hash = "c741f56058dd5d2a98f57c1a0d63eb843b16c38a47472e5a0d923526ce202d94"
 metafile = true
 
 [[files]]
+file = "mods/iris.pw.toml"
+hash = "c880ebfe6d340e4da7fe935f1a3cdcff84d3db7f4efe8fb3d12839b6d08c7aed"
+metafile = true
+
+[[files]]
 file = "mods/jade.pw.toml"
 hash = "f686311201a7a46d392bff8e1df8c21b161ce2283b2927f0ae9b0c71857fa830"
 metafile = true
@@ -47,7 +52,7 @@ metafile = true
 
 [[files]]
 file = "mods/no_fog.pw.toml"
-hash = "d835fe1648f3b36c53c3091d36331c7c659fb6a3a11d03d940457d3e6688a6a0"
+hash = "d7a26d5d922f35e371ef8077cd86fe657f3fb1d787270a43108a61989bf19c05"
 metafile = true
 
 [[files]]
