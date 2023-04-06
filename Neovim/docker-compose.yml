@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  nvim:
+    image: neovim:latest
+    container_name: neovim
+    volumes:
+      - ./data:/neovim
+    restart: unless-stopped
+    command: ["sleep", "infinity"]
