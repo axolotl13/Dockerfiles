@@ -1,0 +1,57 @@
+version: "2.1"
+services:
+  wireguard:
+    image: linuxserver/wireguard
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Mexico_City
+    volumes:
+      - /home/cupid/Docker/wireguard/config:/config
+      - /lib/modules:/lib/modules
+    ports:
+      - 9091:9091
+      - 51413:51413
+      - 51820:51820/udp
+      - 51413:51413/udp
+      - 8888:8888
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+      - net.ipv6.conf.all.disable_ipv6=0
+    restart: unless-stopped
+
+  transmission:
+    image: linuxserver/transmission
+    container_name: transmission
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Mexico_City
+        #- TRANSMISSION_WEB_HOME=/combustion-release/ #optional
+        #- USER=username #optional
+        #- PASS=password #optional
+    volumes:
+      - /home/cupid/Docker/transmission:/config
+      - /home/cupid/Docker/transmission/watch:/watch
+      - /home/cupid/Descargas:/downloads
+    network_mode: "service:wireguard"
+    depends_on:
+      - "wireguard"
+    restart: unless-stopped
+
+  tinyproxy:
+    image: ajoergensen/tinyproxy
+    container_name: tinyproxy
+    environment:
+      - ALLOWED=192.168.1.0/24
+    network_mode: "service:wireguard"
+    depends_on:
+      - "wireguard"
+    restart: unless-stopped
+# networks:
+# wirenat:
+# driver: bridge

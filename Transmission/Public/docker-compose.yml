@@ -1,0 +1,35 @@
+version: "3"
+services:
+  wireguard:
+    image: linuxserver/wireguard
+    container_name: wireguard-transmission
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Mexico_City
+    volumes:
+      - /home/cupid/Docker/transmission/wireguard/config:/config
+    ports:
+      - 9091:9091
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    restart: unless-stopped
+
+  transmission:
+    image: linuxserver/transmission:arm32v7-version-4.0.3-r2
+    container_name: transmission-wireguard
+    network_mode: "service:wireguard"
+    depends_on:
+      - wireguard
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Mexico_City
+    volumes:
+      - /home/cupid/Docker/transmission/config:/config
+      - /home/cupid/Docker/transmission/downloads:/downloads
+      - /home/cupid/Docker/transmission/watch:/watch
+    restart: unless-stopped
