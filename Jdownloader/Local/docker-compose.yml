@@ -6,10 +6,10 @@ services:
     restart: unless-stopped
     user: 1000:100
     volumes:
-      - /home/osmc/Docker/jdownloader/appdata:/opt/JDownloader/cfg
+      - /home/cupid/Docker/jdownloader/appdata:/opt/JDownloader/cfg
       # - ./downloads:/opt/JDownloader/Downloads
-      - /home/osmc/Docker/jdownloader/appdata/logs:/opt/JDownloader/logs
-      - /mnt/MEDIA/Jdownloader:/opt/JDownloader/Downloads
+      - /home/cupid/Docker/jdownloader/appdata/logs:/opt/JDownloader/logs
+      - /home/MEDIA/Jdownloader:/opt/JDownloader/Downloads
       - /etc/localtime:/etc/localtime:ro
     environment:
       MYJD_USER: $MYJD_USER
