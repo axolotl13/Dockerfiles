@@ -1,7 +1,7 @@
 version: "2.1"
 services:
   database:
-    image: yobasystems/alpine-mariadb
+    image: yobasystems/alpine-mariadb:10.6.4
     container_name: database
     restart: unless-stopped
     environment:
@@ -12,6 +12,6 @@ services:
       # MYSQL_ROOT_HOST: sqlberry
       # MARIADB_MYSQL_LOCALHOST_USER: jokerdb
     volumes:
-      - /home/osmc/Docker/mariadb:/var/lib/mysql
+      - /home/cupid/Docker/mariadb:/var/lib/mysql
     ports:
       - "3306:3306"
