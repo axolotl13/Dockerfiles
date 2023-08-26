@@ -1,4 +1,4 @@
-version: "3"
+---
 services:
   wireguard:
     image: linuxserver/wireguard
@@ -11,7 +11,7 @@ services:
       - PGID=1000
       - TZ=America/Mexico_City
     volumes:
-      - /home/cupid/Docker/transmission/wireguard/config:/config
+      - /path/to/data:/config
     ports:
       - 9091:9091
     sysctls:
@@ -29,7 +29,7 @@ services:
       - PGID=1000
       - TZ=America/Mexico_City
     volumes:
-      - /home/cupid/Docker/transmission/config:/config
-      - /home/cupid/Docker/transmission/downloads:/downloads
-      - /home/cupid/Docker/transmission/watch:/watch
+      - /path/to/data:/config
+      - /path/to/downloads:/downloads
+      - /path/to/watch:/watch
     restart: unless-stopped

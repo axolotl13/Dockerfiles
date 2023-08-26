@@ -1,4 +1,4 @@
-version: "2.1"
+---
 services:
   transmission:
     image: linuxserver/transmission:arm32v7-version-4.0.3-r2
@@ -11,9 +11,9 @@ services:
         #- USER=username #optional
         #- PASS=password #optional
     volumes:
-      - /home/cupid/Docker/transmission/config:/config
-      - /home/cupid/Docker/transmission/downloads:/downloads
-      - /home/cupid/Docker/transmission/watch:/watch
+      - /path/to/data:/config
+      - /path/to/downloads:/downloads
+      - /path/to/watch:/watch
     ports:
       - 9091:9091
       - 51413:51413

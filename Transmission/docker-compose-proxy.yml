@@ -1,4 +1,4 @@
-version: "2.1"
+---
 services:
   wireguard:
     image: linuxserver/wireguard
@@ -11,8 +11,8 @@ services:
       - PGID=1000
       - TZ=America/Mexico_City
     volumes:
-      - /home/cupid/Docker/wireguard/config:/config
-      - /lib/modules:/lib/modules
+      - /path/to/data:/config
+      # - /lib/modules:/lib/modules
     ports:
       - 9091:9091
       - 51413:51413
@@ -31,13 +31,13 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Mexico_City
-        #- TRANSMISSION_WEB_HOME=/combustion-release/ #optional
-        #- USER=username #optional
-        #- PASS=password #optional
+      # - TRANSMISSION_WEB_HOME=/combustion-release/ #optional
+      # - USER=username #optional
+      # - PASS=password #optional
     volumes:
-      - /home/cupid/Docker/transmission:/config
-      - /home/cupid/Docker/transmission/watch:/watch
-      - /home/cupid/Descargas:/downloads
+      - /path/to/data:/config
+      - /path/to/downloads:/downloads
+      - /path/to/watch:/watch
     network_mode: "service:wireguard"
     depends_on:
       - "wireguard"
