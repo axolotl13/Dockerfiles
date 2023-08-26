@@ -1,4 +1,4 @@
-version: "2.1"
+---
 services:
   wireguard:
     image: lscr.io/linuxserver/wireguard:latest
@@ -12,7 +12,7 @@ services:
       - TZ=America/Mexico_City
       - SERVERURL=$SERVERURL
       - SERVERPORT=$SERVERPORT
-      - PEERS=5
+      - PEERS=10
       - PEERDNS=auto
       - INTERNAL_SUBNET=10.13.13.0
       - ALLOWEDIPS=0.0.0.0/0
