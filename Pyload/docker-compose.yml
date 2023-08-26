@@ -1,4 +1,4 @@
-version: "2.1"
+---
 services:
   pyload:
     image: linuxserver/pyload
@@ -12,5 +12,4 @@ services:
       - ./downloads:/downloads
     ports:
       - 8000:8000
-        #- 7227:7227 #optional
     restart: unless-stopped
