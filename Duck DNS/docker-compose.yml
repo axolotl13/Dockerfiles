@@ -1,5 +1,4 @@
-version: "3.8"
-
+---
 services:
   duckdnsmc:
     image: linuxserver/duckdns
@@ -8,6 +7,6 @@ services:
       PUID: 1000
       PGID: 1000
       TZ: "America/Mexico_City"
-      SUBDOMAINS: "mimundo3d.duckdns.org"
+      SUBDOMAINS: $SUBDOMAIN
       TOKEN: $TOKEN
     restart: unless-stopped
