@@ -11,3 +11,10 @@ services:
       MYSQL_PASSWORD: $MYSQL_PASSW
     volumes:
       - ./data:/var/lib/mysql
+
+  adminer:
+    image: adminer:latest
+    container_name: mariadb_adminer
+    restart: unless-stopped
+    ports:
+      - 8080:8080

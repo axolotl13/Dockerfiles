@@ -1,0 +1,17 @@
+---
+services:
+  database:
+    image: yobasystems/alpine-mariadb:10.6.4
+    container_name: database
+    restart: unless-stopped
+    environment:
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSW
+      MYSQL_DATABASE: $MYSQL_DATABASE
+      MYSQL_PASSWORD: $MYSQL_PASSW
+      # MYSQL_ROOT_HOST: $MYSQL_HOST
+      # MARIADB_MYSQL_LOCALHOST_USER: $MYSQL_LOCAL
+    volumes:
+      - /path/to/mariadb:/var/lib/mysql
+    ports:
+      - "3306:3306"
